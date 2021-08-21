@@ -30,7 +30,7 @@ class List(ListView):
     #     return UserInfo.objects.all()
 
 
-class Detail(DeleteView):
+class Detail(DetailView):
     model = UserInfo
     template_name = 'classbased/detail.html'
     pk_url_kwarg = 'id'
@@ -49,10 +49,9 @@ class Update(UpdateView):
         return super().form_valid(form)
 
 
-class Delete(DetailView):
+class Delete(DeleteView):
     # pk_url_kwarg = 'id'
     model = UserInfo
-    success_url = 'classbased/list/'
-
+    success_url = '/classbased/list/'
     # def get(self, request, *args, **kwargs):
-    #     return self.post()
+    #     return self.post(request, *args, **kwargs)

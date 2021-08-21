@@ -46,19 +46,19 @@
                 <td>
                     <a href="{% url 'classbased:detail' item.id %}">Details</a>/
                     <a href="{% url 'classbased:update' item.id %}">Update</a>/
-                    <a href="{% url 'classbased:delete' item.id %}">Delete</a>
-                    <!-- <form
-                        action="{% url 'classbased:delete' item:id %}"
-                        method="POST"
-                        id="formdelete"
+                    <!-- <a href="{% url 'classbased:delete' item.id %}">Delete</a> -->
+                    <form
+                        action="/classbased/delete/{{item.id}}"
+                        method="post"
+                        id="form-delete"
                     >
                         {% csrf_token %}
                         <a
                             href="#"
-                            onclick="document.getElementById('formdelete').submit"
+                            onclick="document.getElementById('form-delete').submit()"
                             >Delete
                         </a>
-                    </form> -->
+                    </form>
                 </td>
             </tr>
             {% endfor %}
