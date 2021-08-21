@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Detail of User</h1>
+        <article>
+            <h4><span>First Name: </span> <em>{{data.first_name}}</em></h4>
+            {% if data.middle_name %}
+            <h4><span>Middle Name:</span> {{data.middle_name}}<em</em></h4>
+            {% else %}
+            <h4><span>Middle Name:</span> -<em</em></h4>
+            {% endif %}
+            <h4><span>Last Name</span> <em>{{data.last_name}}</em></h4>
+            <h4><span>Email</span> <em>{{data.email}}</em></h4>
+        </article>
+    </body>
+</html>
