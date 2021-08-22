@@ -18,7 +18,7 @@ class SignUpForm(forms.Form):
         max_length=128, widget=forms.PasswordInput())
 
     #!not working
-    def clean_username(self):
+    def clean_username(self,*args,**kwargs):
         # username = self.cleaned_data['username']
         if User.objects.filter(username=self.cleaned_data['username']).exists():
             raise forms.ValidationError('Username is taken')
@@ -26,7 +26,7 @@ class SignUpForm(forms.Form):
     #!not working
 
     #!not working
-    def clean(self):
+    def clean(self,*args,**kwargs):
         password = self.cleaned_data['password']
         confirm_password = self.cleaned_data['confirm_password']
         if password != confirm_password:
