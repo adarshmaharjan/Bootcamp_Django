@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'user',
     'classbased',
     'crud',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -145,4 +146,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # AUTHENTICATION_BACKENDS = [
 #     'django.contrib.auth.backends.AllowAllUserModelBackend']
 
-AUTH_USER_MODEL = 'user.User'
+# AUTH_USER_MODEL = 'user.User'

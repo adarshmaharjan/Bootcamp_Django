@@ -25,7 +25,9 @@ urlpatterns = [
     path('static-demo/', include('static_media.urls')),
     path('api/', include('rest_class.urls')),
     path('crud/', include('crud.urls', namespace='crud'), ),
-    path('classbased/', include('classbased.urls', namespace='classbased'))
+    path('classbased/', include('classbased.urls', namespace='classbased')),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+
 ]
 
 if settings.DEBUG:

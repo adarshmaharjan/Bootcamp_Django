@@ -9,8 +9,8 @@ from django.db.models.fields.related import OneToOneField
 #     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
-class User(AbstractUser):
-    middle_name = models.CharField(max_length=100)
+# class User(AbstractUser):
+#     middle_name = models.CharField(max_length=100)
 
-    groups = None
-    user_permissions = None
+#     groups = None
+#     user_permissions = None
