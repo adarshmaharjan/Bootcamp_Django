@@ -1,4 +1,4 @@
-from django.http import JsonResponse, response
+from django.http import JsonResponse
 # exempt the csrf
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import serializers

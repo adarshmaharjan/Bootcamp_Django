@@ -13,6 +13,7 @@ class InfoSerializer(serializers.Serializer):
     address = serializers.CharField(max_length=100)
 
     def create(self, validated_data):
+        print('Context on serializer', self.context)
         return Info.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
@@ -20,3 +21,9 @@ class InfoSerializer(serializers.Serializer):
         instance.address = validated_data['address']
         instance.save()
         return instance
+
+
+class InfoModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Info
+        fields = ['name', 'address']
